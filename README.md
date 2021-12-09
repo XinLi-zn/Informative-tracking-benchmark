@@ -48,18 +48,16 @@ You may follow the following steps to evaluate your tracker.
 
 **1. Download this project:**
     
-    git clone https://github.com/wangxiao5791509/VisEvent_SOT_Benchmark
+    git clone git@github.com:XinLi-zn/Informative-tracking-benchmark.git
 
-**2. Download the tracking results of our benchmark:**
-[[**GoogleDrive (185MB)**](https://drive.google.com/file/d/1fILCNMrwt2PiITPWIQFZpk1PJvg_JAjX/view?usp=sharing)]
-
-    unzip tracking_results_VisEvent_SOT_benchmark.zip, and put it into the folder "tracking_results". 
-
-    unzip the "annos.zip" in the folder "annos"
-
-**3. Open your matlab, and run the script "Evaluate_VisEvent_SOT_benchmark.m". Wait and check the final evaluated figures**
-
-<img src="res_fig/VisEvent_benchmark_results.png" width="320"> 
+**2. Run your method:**
+     * **base interface**
+     * **pytracking interface**
+     * **pysot interface**
+     
+**3. Compute the performance score:**
+ 
+**4. Run the script "Evaluate_VisEvent_SOT_benchmark.m" for computing the performance score**
 
 
 
