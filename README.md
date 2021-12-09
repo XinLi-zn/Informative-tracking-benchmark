@@ -44,20 +44,35 @@ Both txt and json annotation files are provided.
 ## Evaluation ToolKit 
 The evaluation tookit is wrote in python. We also provide the interfaces to the pysot and pytracking tracking toolkits.
 
-You may follow the following steps to evaluate your tracker.
+You may follow the below steps to evaluate your tracker.
 
-**1. Download this project:**
-    
+1. Download this project:
+    ```
     git clone git@github.com:XinLi-zn/Informative-tracking-benchmark.git
+    ```
 
-**2. Run your method:**
-     * **base interface**
-     * **pytracking interface**
-     * **pysot interface**
+2. Run your method with any of the following way:
+
+   **base interface**.     
+    Integrating your method into the base_toolkit/test_tracker.py file and then run the below command to evaluate your tracker.
+     ```
+     CUDA_VISIBLE_DEVICES=0 python test_tracker.py --dataset ITB --dataset_path /path-to/ITB
+     ```
      
-**3. Compute the performance score:**
- 
-**4. Run the script "Evaluate_VisEvent_SOT_benchmark.m" for computing the performance score**
+    **pytracking interface**.  
+     Merging the files in pytracking_toolkit/pytracking to the counterpart files in your pytracking toolkit and then run the below command to evaluate your tracker.
+     ```
+     CUDA_VISIBLE_DEVICES=0 python run_tracker.py tracker_name tracker_parameter  --dataset ITB --descrip
+     ```
+     **pysot interface**.  
+     
+3. Compute the performance score:
+
+   The performance analysis codes located in the performance_analysis folder. Using the below commmand to compute the performance score.
+     ```
+     python eval.py -p /home/data/results/atom/default_reeval  -d ITB -t base
+     ```
+   The above command computes the score of the results put in the folder of '/home/data/results/atom/default_reeval/ITB/base/*.txt'
 
 
 
