@@ -19,13 +19,13 @@ The informative tracking benchmark (**ITB**)
 ## Introduction 
 Along with the rapid progress of visual tracking, existing benchmarks become less informative due to redundancy of samples and weak discrimination between current trackers, making evaluations on all datasets extremely time-consuming. Thus, a small and informative benchmark, which covers all typical challenging scenarios to facilitate assessing the tracker performance, is of great interest. In this work, we develop a principled way to construct a small and informative tracking benchmark (ITB) with 7\% out of 1.2 M frames of existing and newly collected datasets, which enables efficient evaluation while ensuring effectiveness. Specifically, we first design a quality assessment mechanism to select the most informative sequences from existing benchmarks taking into account 1) challenging level, 2) discriminative strength, 3) and density of appearance variations. Furthermore, we collect additional sequences to ensure the diversity and balance of tracking scenarios, leading to a total of 20 sequences for each scenario. By analyzing the results of 15 state-of-the-art trackers re-trained on the same data, we determine the effective methods for robust tracking under each scenario and demonstrate new challenges for future research direction in this field. 
 
-
 ## Dataset Samples 
-![avatar](img-examples/seq1.png）
+<img src="img-examples/seqs1.png" width="420"> <img src="img-examples/seqs2.png" width="420"> 
 
 ## Dataset Download (8.15 GB)
 [[**GoogleDrive**](https://drive.google.com/drive/folders/1128vRsweiS5BuOyFbtOAJ6kgXSR5Juj7?usp=sharing)] 
 [[**BaiduYun (Code: intb)**](https://pan.baidu.com/s/1gru7Bl-8VztWkodhqA1a1g)] 
+
 
 
 ## Evaluation ToolKit 
@@ -44,9 +44,18 @@ Only matlab version is available.
 
 **3. Open your matlab, and run the script "Evaluate_VisEvent_SOT_benchmark.m". Wait and check the final evaluated figures**
 
-<img src="res_fig/VisEvent_benchmark_results.png" width="650"> 
+<img src="res_fig/VisEvent_benchmark_results.png" width="320"> 
 
 
+
+## Acknowledgement
+We select several sequences with the hightest quality score (defined in the paper) from existing tracking datasets including OTB2015, NFS, UAV123, NUS-PRO, VisDrone, and LaSOT. Many thanks to their great work!
+* [OTB2015 ] Object track-ing benchmark. Yi Wu, Jongwoo Lim, and Ming-Hsuan Yang. IEEE TPAMI, 2015.
+* [   NFS  ] Need for speed: A benchmark for higher frame rate object tracking. Kiani Galoogahi, Hamed and Fagg, Ashton and Huang, Chen and Ramanan, Deva and Lucey, Simon. ICCV 2017.
+* [ UAV123 ] A benchmark and simulator for uav tracking. Mueller, Matthias and Smith, Neil and Ghanem, Bernard. ECCV 2016.
+* [NUS-PRO ] Nus-pro: A new visual tracking challenge. Annan Li, Min Lin, Yi Wu, Ming-Hsuan Yang, Shuicheng Yan. PAMI 2015.
+* [VisDrone] Visdrone-det2018: The vision meets drone object detection in image challenge results. Zhu, Pengfei and Wen, Longyin and Du, Dawei and Bian, Xiao and Ling, Haibin and Hu, Qinghua and Nie, Qinqin and Cheng, Hao and Liu, Chenfeng and Liu, Xiaoyu and others. ECCVW 2018.
+* [  LaSOT ] Lasot: A high-quality benchmark for large-scale single object tracking. Heng Fan, Liting Lin et al.. CVPR 2019.
 
 ## Contact
 If you have any questions about this benchmark, please feel free to contact Xin Li at xinlihitsz@gmail.com.
