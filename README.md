@@ -1,17 +1,14 @@
 # Informative-tracking-benchmark
-An informative tracking benchmark comprising 9 scenarios, 180 diverse videos, and 86,260 frames with new challenges. <img src="visevent_art.png" width="400" align="right"> 
-
-
-
-
+The informative tracking benchmark (**ITB**) 
+* **higher diversity**. It contains 9 representative scenarios and 180 diverse videos. <img src="img-examples/moti3.png" width="350" align="right">
+* **more effective**. Sequences are carefully selected based on chellening level, discriminative strength, and density of appearance variations. 
+* **more efficient**. It is constructed with 7\% out of 1.2 M frames allows saving 93\% of evaluation time (3,625 seconds on informative benchmark vs. 50,000 seconds on all benchmarks) for a real-time tracker (24 frames per second). 
+* **more rigorous comparisons**. (All the baseline methods are re-evaluated using the same protocol, e.g., using the same training set and finetuning hyper-parameters on a specified validate set).
 
 
 <!--
-# VisEvent_SOT_Benchmark <img src="visevent_art.png" width="400" align="right"> 
-The First Large-scale Benchmark Dataset for Reliable Object Tracking by fusing RGB and Event Cameras. 
-
-> **VisEvent: Reliable Object Tracking via Collaboration of Frame and Event Flows**, Xiao Wang, Jianing Li, Lin Zhu, Zhipeng Zhang, Zhe Chen, Xin Li, Yaowei Wang, Yonghong Tian, Feng Wu 
-> **[[Paper](https://arxiv.org/pdf/2108.05015.pdf)] [[Project](https://sites.google.com/view/viseventtrack/)] [[DemoVideo](https://www.youtube.com/watch?v=U4uUjci9Gjc)] [[VideoTutorial](https://www.youtube.com/watch?v=vGwHI2d2AX0&ab_channel=XiaoWang)]** 
+> **Informative Tracking Benchmark**, Xin Li, Qiao Liu, Wenjie Pei, Qiuhong Shen, Yaowei Wang, Huchuan Lu, Ming-Hsuan Yang 
+> **[[Paper]()] [[Project]()] [[DemoVideo](https://www.youtube.com/watch?v=U4uUjci9Gjc)] [[VideoTutorial]()]** 
 -->
 
 ## News: 
@@ -24,26 +21,11 @@ Along with the rapid progress of visual tracking, existing benchmarks become les
 
 
 ## Dataset Samples 
-![visevent-example](https://github.com/wangxiao5791509/RGB_Event_Tracking_Benchmark/blob/main/videosamples.png)
+![avatar](img-examples/seq1.png）
 
-## How to Download VisEvent Dataset? 
-We provide both the original **aedat4** (contains the RGB frames, event, time-stamp) and **image** format for VisEvent dataset. 
-
-**The "Image" only version (about 63.7 GB):** 
-Preview of each files: <img src="https://github.com/wangxiao5791509/VisEvent_SOT_Benchmark/blob/main/Screenshot%20from%202021-08-27%2009-08-23.png" width="200" align="left"> 
-[[**BaiduYun (Code: pclt)**](https://pan.baidu.com/s/1E7dgAxHV2QFPByKs3is7nw)] 
-[[**GoogleDrive**]] 
-[[**OneDrive**](https://stuahueducn-my.sharepoint.com/:f:/g/personal/e16101002_stuahueducn_onmicrosoft_com/Em_Cv5OzNpBAjlhzOHeqwxEBR4B2Xrj3hqMIk-U0RvKXzg?e=EBJWkR)] 
-
-
-**The "aedat4" version (about 226.0 GB):** 
-Preview of each files: <img src="https://github.com/wangxiao5791509/VisEvent_SOT_Benchmark/blob/main/Screenshot%20from%202021-08-27%2008-57-19.png" width="200" align="left"> 
-[[**BaiduYun(Code: pclt)**](https://pan.baidu.com/s/122DXDc7OO5mB78kbU-G98Q)] 
-[[**Googledrive**](https://drive.google.com/drive/folders/188pkivkfshpLSMADx9kgzw0PIcDqhclO?usp=sharing)] 
-[[**Onedrive**](https://stuahueducn-my.sharepoint.com/:f:/g/personal/e16101002_stuahueducn_onmicrosoft_com/EkEqjE5_M1lKjyc__fq8o5oBYR9cVqyFOvmSguz-ro111A?e=4K8Vue)]
-
-
-
+## Dataset Download (8.15 GB)
+[[**GoogleDrive**](https://drive.google.com/drive/folders/1128vRsweiS5BuOyFbtOAJ6kgXSR5Juj7?usp=sharing)] 
+[[**BaiduYun (Code: intb)**](https://pan.baidu.com/s/1gru7Bl-8VztWkodhqA1a1g)] 
 
 
 ## Evaluation ToolKit 
