@@ -51,16 +51,16 @@ You may follow the below steps to evaluate your tracker.
     git clone git@github.com:XinLi-zn/Informative-tracking-benchmark.git
     ```
 
-2. Run your method with any of the following way:
+2. Run your method with one of the following ways: 
 
    **base interface**.     
-    Integrating your method into the base_toolkit/test_tracker.py file and then run the below command to evaluate your tracker.
+    Integrating your method into the base_toolkit/test_tracker.py file and then running the below command to evaluate your tracker.
      ```
      CUDA_VISIBLE_DEVICES=0 python test_tracker.py --dataset ITB --dataset_path /path-to/ITB
      ```
      
     **pytracking interface**.  
-     Merging the files in pytracking_toolkit/pytracking to the counterpart files in your pytracking toolkit and then run the below command to evaluate your tracker.
+     Merging the files in pytracking_toolkit/pytracking to the counterpart files in your pytracking toolkit and then running the below command to evaluate your tracker.
      ```
      CUDA_VISIBLE_DEVICES=0 python run_tracker.py tracker_name tracker_parameter  --dataset ITB --descrip
      ```
