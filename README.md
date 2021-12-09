@@ -1,5 +1,5 @@
 # Informative-tracking-benchmark
-The informative tracking benchmark (**ITB**) 
+Informative tracking benchmark (**ITB**) 
 * **higher diversity**. It contains 9 representative scenarios and 180 diverse videos. <img src="img-examples/moti3.png" width="350" align="right">
 * **more effective**. Sequences are carefully selected based on chellening level, discriminative strength, and density of appearance variations. 
 * **more efficient**. It is constructed with 7\% out of 1.2 M frames allows saving 93\% of evaluation time (3,625 seconds on informative benchmark vs. 50,000 seconds on all benchmarks) for a real-time tracker (24 frames per second). 
@@ -22,16 +22,31 @@ Along with the rapid progress of visual tracking, existing benchmarks become les
 ## Dataset Samples 
 <img src="img-examples/seqs1.png" width="420"> <img src="img-examples/seqs2.png" width="420"> 
 
-## Dataset Download (8.15 GB)
+## Dataset Download (8.15 GB) and Preparation
 [[**GoogleDrive**](https://drive.google.com/drive/folders/1128vRsweiS5BuOyFbtOAJ6kgXSR5Juj7?usp=sharing)] 
 [[**BaiduYun (Code: intb)**](https://pan.baidu.com/s/1gru7Bl-8VztWkodhqA1a1g)] 
 
-
+After downloading, you should prepare the data in the following structure:
+```
+ITB
+ |——————Scenario_folder1
+ |        └——————seq1
+ |        |       └————xxxx.jpg
+ |        |       └————groundtruth.txt
+ |        └——————seq2
+ |        └——————...
+ |——————Scenario_folder2
+ |——————...
+ └------ITB.json
+ ```
+Both txt and json annotation files are provided. 
 
 ## Evaluation ToolKit 
-Only matlab version is available. 
+The evaluation tookit is wrote in python. We also provide the interfaces to the pysot and pytracking tracking toolkits.
 
-**1. Download this github:**
+You may follow the following steps to evaluate your tracker.
+
+**1. Download this project:**
     
     git clone https://github.com/wangxiao5791509/VisEvent_SOT_Benchmark
 
@@ -51,11 +66,11 @@ Only matlab version is available.
 ## Acknowledgement
 We select several sequences with the hightest quality score (defined in the paper) from existing tracking datasets including OTB2015, NFS, UAV123, NUS-PRO, VisDrone, and LaSOT. Many thanks to their great work!
 * [OTB2015 ] Object track-ing benchmark. Yi Wu, Jongwoo Lim, and Ming-Hsuan Yang. IEEE TPAMI, 2015.
-* [   NFS  ] Need for speed: A benchmark for higher frame rate object tracking. Kiani Galoogahi, Hamed and Fagg, Ashton and Huang, Chen and Ramanan, Deva and Lucey, Simon. ICCV 2017.
+* [   NFS  ] Need for speed: A benchmark for higher frame rate object tracking. Kiani Galoogahi, Hamed and Fagg, et al. ICCV 2017.
 * [ UAV123 ] A benchmark and simulator for uav tracking. Mueller, Matthias and Smith, Neil and Ghanem, Bernard. ECCV 2016.
 * [NUS-PRO ] Nus-pro: A new visual tracking challenge. Annan Li, Min Lin, Yi Wu, Ming-Hsuan Yang, Shuicheng Yan. PAMI 2015.
-* [VisDrone] Visdrone-det2018: The vision meets drone object detection in image challenge results. Zhu, Pengfei and Wen, Longyin and Du, Dawei and Bian, Xiao and Ling, Haibin and Hu, Qinghua and Nie, Qinqin and Cheng, Hao and Liu, Chenfeng and Liu, Xiaoyu and others. ECCVW 2018.
-* [  LaSOT ] Lasot: A high-quality benchmark for large-scale single object tracking. Heng Fan, Liting Lin et al.. CVPR 2019.
+* [VisDrone] Visdrone-det2018: The vision meets drone object detection in image challenge results. Pengfei Zhu, Longyin Wen, et al. ECCVW 2018.
+* [  LaSOT ] Lasot: A high-quality benchmark for large-scale single object tracking. Heng Fan, Liting Lin, et al. CVPR 2019.
 
 ## Contact
 If you have any questions about this benchmark, please feel free to contact Xin Li at xinlihitsz@gmail.com.
