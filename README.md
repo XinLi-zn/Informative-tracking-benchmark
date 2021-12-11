@@ -65,10 +65,13 @@ You may follow the below steps to evaluate your tracker.
      CUDA_VISIBLE_DEVICES=0 python run_tracker.py tracker_name tracker_parameter  --dataset ITB --descrip
      ```
      **pysot interface**.  
-     
+     Putting the pysot_toolkit into your tracker folder and adding your tracker to the 'test.py' file in the pysot_toolkit. Then run the below command to evaluate your tracker.
+     ```
+     CUDA_VISIBLE_DEVICES=0 python -u pysot_toolkit/test.py --dataset ITB --name 'tracker_name' 
+     ```
 3. Compute the performance score:
 
-   The performance analysis codes located in the performance_analysis folder. Using the below commmand to compute the performance score.
+   Here, we use the performance analysis codes in the pysot_toolkit to compute the score. Putting the pysot_toolkit into your tracker folder and use the below commmand to compute the performance score.
      ```
      python eval.py -p /home/data/results/atom/default_reeval  -d ITB -t base
      ```
