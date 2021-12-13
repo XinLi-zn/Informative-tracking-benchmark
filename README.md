@@ -59,12 +59,12 @@ You may follow the below steps to evaluate your tracker.
      CUDA_VISIBLE_DEVICES=0 python test_tracker.py --dataset ITB --dataset_path /path-to/ITB
      ```
      
-    **pytracking interface**.  
+    **pytracking interface**. [(pytracking link)](https://github.com/visionml/pytracking)  
      Merging the files in pytracking_toolkit/pytracking to the counterpart files in your pytracking toolkit and then running the below command to evaluate your tracker.
      ```
      CUDA_VISIBLE_DEVICES=0 python run_tracker.py tracker_name tracker_parameter  --dataset ITB --descrip
      ```
-     **pysot interface**.  
+     **pysot interface**. [(pysot link)](https://github.com/STVIR/pysot)   
      Putting the pysot_toolkit into your tracker folder and adding your tracker to the 'test.py' file in the pysot_toolkit. Then run the below command to evaluate your tracker.
      ```
      CUDA_VISIBLE_DEVICES=0 python -u pysot_toolkit/test.py --dataset ITB --name 'tracker_name' 
@@ -73,9 +73,11 @@ You may follow the below steps to evaluate your tracker.
 
    Here, we use the performance analysis codes in the pysot_toolkit to compute the score. Putting the pysot_toolkit into your tracker folder and use the below commmand to compute the performance score.
      ```
-     python eval.py -p /home/data/results/atom/default_reeval  -d ITB -t base
+     python eval.py -p ./results-example/  -d ITB -t transt
      ```
-   The above command computes the score of the results put in the folder of '/home/data/results/atom/default_reeval/ITB/base/*.txt'
+   The above command computes the score of the results put in the folder of './pysot_toolkit/results-example/ITB/transt\*/\*.txt' and it shows the overall results and the results of each scenario.
+   
+   <img src="img-examples/compute_score.png" width="640">
 
 
 
