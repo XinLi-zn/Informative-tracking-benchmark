@@ -34,6 +34,7 @@ class ITBDataset(Dataset):
         super(ITBDataset, self).__init__(name, dataset_root)
 
         self.videos = {}
+        self.video_scenario={}
         # using json files
         json_path = os.path.join(dataset_root, name+'.json')
         assert os.path.isfile(json_path),'{:} does not exist! Please check that!'.format(json_path)
@@ -41,6 +42,7 @@ class ITBDataset(Dataset):
             meta_data = json.load(f)
         # load videos
         videos = tqdm(meta_data.keys(), desc='loading '+name, ncols=100)
+
         for video in videos:
             self.videos[video] = ITBVideo(video,
                                              dataset_root,
@@ -50,6 +52,7 @@ class ITBDataset(Dataset):
                                              meta_data[video]['gt_rect'],
                                              None, #meta_data[video]['scenario'],
                                              load_img)
+            self.video_scenario[video]=meta_data[video]['scenario_name']
 
         self.attr = {}
         self.attr['ALL'] = list(self.videos.keys())

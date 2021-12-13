@@ -13,7 +13,8 @@ if env_path not in sys.path:
 from glob import glob
 from tqdm import tqdm
 from multiprocessing import Pool
-from toolkit.datasets import ITBDataset
+from toolkit.datasets import OTBDataset, UAVDataset, LaSOTDataset, \
+        VOTDataset, NFSDataset, VOTLTDataset, NUSPRODataset, VisDroneDataset, ITBDataset
 from toolkit.evaluation import OPEBenchmark, AccuracyRobustnessBenchmark, \
         EAOBenchmark, F1Benchmark
 
@@ -44,9 +45,9 @@ def main():
     assert len(trackers) > 0
     args.num = min(args.num, len(trackers))
 
-    assert False, 'please set the path to the ITB dataset in eval.py! And comment this line.'
+    # assert False, 'please set the path to the ITB dataset in eval.py!'
     # please set the path of your itb folder
-    root = os.path.realpath('path to ITB') # if /home/data/testing_dataset/ITB, set it as '/home/data/testing_dataset'
+    root = os.path.realpath('/home/data/testing_dataset') # if /home/data/testing_dataset/ITB, set it as '/home/data/testing_dataset'
     root = os.path.join(root, args.dataset)
     if 'ITB' in args.dataset:
         dataset = ITBDataset(args.dataset, root)
@@ -62,8 +63,16 @@ def main():
             for ret in tqdm(pool.imap_unordered(benchmark.eval_precision,
                                                 trackers), desc='eval precision', total=len(trackers), ncols=100):
                 precision_ret.update(ret)
-        benchmark.show_result(success_ret, precision_ret, benchmark.eval_mIoU(),
-                              show_video_level=args.show_video_level)
+        norm_precision_ret = {}
+        with Pool(processes=args.num) as pool:
+            for ret in tqdm(pool.imap_unordered(benchmark.eval_norm_precision,
+                trackers), desc='eval norm precision', total=len(trackers), ncols=100):
+                norm_precision_ret.update(ret)
+
+        mIou_ret,mIou_scen = benchmark.eval_mIoU()
+        benchmark.show_result_ITB(mIou_ret,mIou_scen,success_ret, precision_ret,norm_precision_ret,
+                show_video_level=args.show_video_level)
+
     elif 'OTB' in args.dataset:
         dataset = OTBDataset(args.dataset, root)
         dataset.set_tracker(tracker_dir, trackers)
@@ -184,7 +193,4 @@ def main():
 if __name__ == '__main__':
     main()
 
-# you may use the following command to compute the performance score.
-# the above command computes the score of the results put in the folder of '/home/data/results/atom/default_reeval/ITB/base/*.txt'
-# python eval.py -p /home/data/results/atom/default_reeval  -d ITB -t base
 
