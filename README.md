@@ -6,9 +6,11 @@ Informative tracking benchmark (**ITB**)
 * **more rigorous comparisons**. (All the baseline methods are re-evaluated using the same protocol, e.g., using the same training set and finetuning hyper-parameters on a specified validate set).
 
 
-<!--
-> **Informative Tracking Benchmark**, Xin Li, Qiao Liu, Wenjie Pei, Qiuhong Shen, Yaowei Wang, Huchuan Lu, Ming-Hsuan Yang 
-> **[[Paper]()] [[Project]()] [[DemoVideo](https://www.youtube.com/watch?v=U4uUjci9Gjc)] [[VideoTutorial]()]** 
+
+> **An Informative Tracking Benchmark**, Xin Li, Qiao Liu, Wenjie Pei, Qiuhong Shen, Yaowei Wang, Huchuan Lu, Ming-Hsuan Yang 
+> **[[Paper]()]**
+
+<!--  [[Project]()] [[DemoVideo](https://www.youtube.com/watch?v=U4uUjci9Gjc)] [[VideoTutorial]()]
 -->
 
 ## News: 
