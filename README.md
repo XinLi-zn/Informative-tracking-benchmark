@@ -8,7 +8,7 @@ Informative tracking benchmark (**ITB**)
 
 
 > **An Informative Tracking Benchmark**, Xin Li, Qiao Liu, Wenjie Pei, Qiuhong Shen, Yaowei Wang, Huchuan Lu, Ming-Hsuan Yang 
-> **[[Paper]()]**
+> **[[Paper](https://arxiv.org/abs/2112.06467)]**
 
 <!--  [[Project]()] [[DemoVideo](https://www.youtube.com/watch?v=U4uUjci9Gjc)] [[VideoTutorial]()]
 -->
